@@ -1,0 +1,1 @@
+json.partial! @problems, partial: 'problem', as: :problem

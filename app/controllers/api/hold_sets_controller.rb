@@ -1,0 +1,2 @@
+class HoldSetsController < ApplicationController
+end
