@@ -1,0 +1,1 @@
+json.array! @picked_holds, partial: 'picked_hold', as: :picked_hold

@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     post "/favorites" => "favorites#create"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
-
+    get "/pickedholds" => "picked_holds#index"
   end
 end
