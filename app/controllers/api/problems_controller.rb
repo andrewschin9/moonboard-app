@@ -8,7 +8,7 @@ class Api::ProblemsController < ApplicationController
 
   def create
     @problem = Problem.new(
-      prob_name: params[:prob_name].upcase,
+      prob_name: params[:prob_name] && params[:prob_name].upcase,
       grade: params[:grade],
       hold_set_id: 1,
       user_id: current_user.id,

@@ -3,7 +3,7 @@ class Api::FavoritesController < ApplicationController
 
 
   def index
-    @favorites = Favorite.all
+    @favorites = Favorite.all.select{|faves| faves[:user_id]==current_user.id}
     render 'index.json.jbuilder'
   end
 
@@ -13,7 +13,7 @@ class Api::FavoritesController < ApplicationController
       user_id: current_user.id
     )
 
-    @favorites.save
+    @favorites.save!
     render 'show.json.jbuilder'
   end
 

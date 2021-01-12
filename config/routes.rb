@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     delete "/problems/:id" => "problems#destroy"
     get "/favorites" => "favorites#index"
     post "/favorites" => "favorites#create"
+    delete "/favorites/:id" => "favorites#destroy"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
     get "/pickedholds" => "picked_holds#index"
